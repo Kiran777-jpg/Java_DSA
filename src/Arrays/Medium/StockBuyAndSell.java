@@ -1,6 +1,6 @@
 package Arrays.Medium;
 
-public class StockBuyAndSe4ll {
+public class StockBuyAndSell {
 
     public static int maxProfit(int[] arr) {
         int n=arr.length;
