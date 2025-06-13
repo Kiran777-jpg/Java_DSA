@@ -1,4 +1,4 @@
-package BinarySearch.Easy;
+package BinarySearch.OneDArrays;
 
 public class FloorAndCeil {
 
