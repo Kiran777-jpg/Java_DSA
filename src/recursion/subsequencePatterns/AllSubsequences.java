@@ -7,7 +7,7 @@ import java.util.List;
 
 public class AllSubsequences {
 
-    public static void utilGenerateSequences(int i, String temp, String s, List<String> ans) {
+    private static void utilGenerateSequences(int i, String temp, String s, List<String> ans) {
         if(i==s.length()) {
             ans.add(temp);
             return;
@@ -16,13 +16,13 @@ public class AllSubsequences {
         utilGenerateSequences(i+1, temp, s, ans);
     }
 
-    public static List<String> generateSequences(String s) {
+    private static List<String> generateSequences(String s) {
         List<String> ans=new ArrayList<>();
         utilGenerateSequences(0, "", s, ans);
         return ans;
     }
 
-    public static void utilGenerateSequences2(int start, String temp, String s, List<String> ans) {
+    private static void utilGenerateSequences2(int start, String temp, String s, List<String> ans) {
         ans.add(temp);
 //        if(start==s.length()) return;
         for(int i=start;i<s.length();i++) {
@@ -30,7 +30,7 @@ public class AllSubsequences {
         }
     }
 
-    public static List<String> generateSequences2(String s) {
+    private static List<String> generateSequences2(String s) {
         List<String> ans=new ArrayList<>();
         utilGenerateSequences2(0, "", s, ans);
         return ans;
@@ -55,6 +55,22 @@ public class AllSubsequences {
         return ans;
     }
 
+    private static void recursion2(int idx, int[] nums, List<Integer> temp) {
+        System.out.println(temp);
+        for(int i=idx;i<nums.length;i++) {
+            temp.add(nums[i]);
+            recursion2( i+1, nums, temp);
+            temp.removeLast();
+        }
+    }
+
+
+    private static void integerSubsequences() {
+        int[] nums = {4,2,10,5,1,3};
+        List<Integer> temp = new ArrayList<>();
+        recursion2(0, nums, temp);
+    }
+
     public static void main(String[] args) {
         String s = "abc";
         List<String> ans = generateSequences(s);
@@ -65,5 +81,7 @@ public class AllSubsequences {
 
         ans = usingBits(s);
         System.out.println(ans);
+
+        integerSubsequences();
     }
 }
