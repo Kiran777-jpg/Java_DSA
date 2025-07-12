@@ -26,6 +26,6 @@ public class PhoneNumbersLetterCombinations {
 
     public static void main(String[] args) {
         String digits = "234";
-        letterCombinations(digits);
+        letterCombinations(digits); // TC: O(2^n)*K, SC:O(k)
     }
 }
