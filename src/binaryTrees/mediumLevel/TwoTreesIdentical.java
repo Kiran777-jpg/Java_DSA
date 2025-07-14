@@ -16,7 +16,6 @@ public class TwoTreesIdentical {
         Node root = BinaryTreeCreation.buildTree2();
         Node root2 = BinaryTreeCreation.buildTree2();
 //        root2.left.left.right=new Node(7);
-        System.out.println(isTreesIdentical(root, root2));
-
+        System.out.println(isTreesIdentical(root, root2)); // TC: O(n+m), SC:O(1)
     }
 }
