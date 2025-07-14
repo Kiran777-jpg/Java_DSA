@@ -5,14 +5,14 @@ public class Node {
     public Node left;
     public Node right;
 
-    Node() {
+    public Node() {
         this.data = 0;
         this.left = null;
         this.right = null;
     }
 
 
-    Node(int data) {
+    public Node(int data) {
         this.data=data;
         left=right=null;
     }

@@ -33,7 +33,7 @@ class Pair {
     }
 }
 
-public class PreInPostInSingleIteration {
+public class PreInPostSingleIteration {
 
     private static void traversals(Node root) {
         List<Integer> preorder=new ArrayList<>();
