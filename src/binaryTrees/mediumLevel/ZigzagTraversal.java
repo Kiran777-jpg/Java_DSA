@@ -36,6 +36,6 @@ public class ZigzagTraversal {
 
     public static void main(String[] args) {
         Node root= BinaryTreeCreation.buildTree2();
-        levelorderTraversal(root);
+        levelorderTraversal(root); // TC: O(n), SC:O(n)
     }
 }

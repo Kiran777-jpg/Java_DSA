@@ -113,5 +113,16 @@ public class VerticalorderTraversal {
         Node root= BinaryTreeCreation.buildTree2();
         verticalorderTraversal(root);
         verticalorderTraversalXY(root);
+
+        /*
+Time Complexity: O(N * log2N * log2N * log2N) where N represents the number of nodes in the Binary Tree.
+Postorder Traversal performed using BFS as a time complexity of O(N) as we are visiting each and every node once.
+Multiset Operations to insert overlapping nodes at a specific vertical and horizontal level also takes O(log2N) complexity.
+Map operations involve insertion and retrieval of nodes with their vertical and level as their keys. Since there are two nested maps, the total time complexity becomes O(log2N)*O(log2N).
+
+Space Complexity: O(N + N/2) where N represents the number of nodes in the Binary Tree.
+The map for storing nodes based on their vertical and level information occupies an additional space complexity of O(N) as it stores all N nodes of the Binary Tree.
+The queue for breadth first traversal occupies a space proportional to the maximum level of the tree which can be O(N/2) in the worst case of a balanced tree.
+         */
     }
 }
