@@ -24,6 +24,20 @@ public class BinaryTreeCreation {
         preorder(root.right);
     }
 
+    public static void inorder(Node root) {
+        if(root==null) return;
+        inorder(root.left);
+        System.out.print(root.data + ", ");
+        inorder(root.right);
+    }
+
+    public static void postorder(Node root) {
+        if(root==null) return;
+        postorder(root.left);
+        postorder(root.right);
+        System.out.print(root.data + ", ");
+    }
+
     public static Node buildTree2() {
         Node root = new Node(1);
         root.left = new Node(2);
