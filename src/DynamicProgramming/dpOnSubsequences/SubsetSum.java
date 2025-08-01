@@ -1,4 +1,4 @@
-package DynamicProgramming.dpOnGrids.dpOnSubsequences;
+package DynamicProgramming.dpOnSubsequences;
 
 import java.util.Arrays;
 
